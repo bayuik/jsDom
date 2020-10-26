@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Login</h2>
+    <p class="description">Department Of Finance</p>
+    <input type="email" id="email" value="email"><br>
+    <input type="username" class="username" value="username"><br>
+    <input type="passwords" class="passwords" value="passwords"><br><br>
+
+    <button type="button" name="button" onclick=submit()>Submit</button>
+
+    <script>
+        let submit = () => {
+            console.log(document.getElementById("email"));
+            console.log(document.getElementsByClassName("username"));
+            console.log(document.getElementsByClassName("passwords"));
+            console.log(document.getElementsByTagName("p"));
+        }
+    </script>
+</body>
+</html>

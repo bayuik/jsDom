@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button type="button" onclick=start() name="button">Jalankan</button> <br> <br> <hr>
+
+    Attribut <b>getNamedItem()</b> :
+    <p id="getNamedItem">contoh</p> <hr>
+
+    Attribut <b>name()</b> :
+    <p id="name">contoh</p> <hr>
+
+    Attribut <b>length()</b> :
+    <p id="length">contoh</p> <hr>
+
+    <script>
+        let start = () => {
+            getNamedItem();
+            name();
+            length();
+        }
+
+        let getNamedItem = () => {
+            let a = document.getElementsByTagName("button")[0];
+            let b = a.attributes.getNamedItem("onclick").value;
+            document.getElementById("getNamedItem").innerHTML = b;
+        }
+
+        let name = () => {
+            let a = document.getElementsByTagName("button")[0];
+            let b = a.attributes[0].name;
+            document.getElementById("name").innerHTML = b;
+        }
+
+        let length = () => {
+            let a = document.getElementsByTagName("button")[0];
+            let b = a.attributes.length;
+            document.getElementById("length").innerHTML = b;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button type="button" onclick=tombol() name="button">Jalankan</button> <br> <br> <hr>
+
+    <b>Base URI</b> Property : <br>
+    <p id="base">contoh</p> <hr>
+
+    <b>Body</b> Property : <br>
+    <p id="body">contoh</p>
+    <hr>
+    <b>Create</b> Element : <br> <br>
+
+    <script>
+        let tombol = () => {
+            func1();
+            func2();
+            func3();
+        }
+
+        let func1 = () => {
+            let a = document.baseURI;
+            document.getElementById("base").innerHTML = a;
+        };
+
+        let func2 = () => {
+            document.body.style.backgroundColor = "green";
+        };
+
+        let func3 = () => {
+            let a = document.createElement("input");
+            document.body.appendChild(a);
+        }
+    </script>
+</body>
+</html>

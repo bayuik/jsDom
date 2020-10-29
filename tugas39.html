@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button type="button" onclick=tombol() id="tombol" name="button">jalankan</button> <br> <br> <hr>
+
+    <b>Active Element</b> Property : <br>
+    <p id="active">contoh</p> <hr>
+
+    <b>AddEventListener()</b> Property : <br>
+    <p id="event">contoh</p> <hr>
+
+    <script>
+        let tombol = () => {
+            func1();
+            func2();
+        };
+
+        let func1 = () => {
+            let a = document.activeElement.tagName;
+            document.getElementById("active").innerHTML = a;
+        };
+
+        let func2 = () => {
+            document.getElementById("tombol").addEventListener("click", () => {
+                document.getElementById("event").innerHTML = "Sukses ! mengubah addEventListener()"
+            })
+        }
+    </script>
+</body>
+</html>

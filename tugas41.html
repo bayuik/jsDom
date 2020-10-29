@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Pilih warna background</p>
+
+    <select onchange=start() id="mySelect">
+        <option value="white">white</option>
+        <option value="red">red</option>
+        <option value="blue">blue</option>
+        <option value="yellow">yellow</option>
+    </select>
+
+    <p>Saat kamu memilih warna, background akan berubah</p>
+
+    <script>
+        let start = () => {
+            let a = document.getElementById("mySelect").value;
+            document.body.style.backgroundColor = a;
+        }
+    </script>
+</body>
+</html>

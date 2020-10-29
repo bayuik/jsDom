@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="mouse">Dekatkan mouse</p>
+
+    <script>
+        let mouse = document.getElementById("mouse");
+
+        mouse.addEventListener("mouseenter", function(event) {
+            event.target.style.color = "red";
+
+            setTimeout(() => {
+                event.target.style.color = "";
+            }, 500)
+        }, false);
+
+        mouse.addEventListener("mouseover", function (event){
+            event.target.style.color = "black";
+
+            setTimeout(() => {
+                event.target.style.color = "";
+            }, 500);
+        }, false)
+    </script>
+</body>
+</html>
